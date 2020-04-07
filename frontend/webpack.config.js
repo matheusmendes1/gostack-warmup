@@ -6,7 +6,6 @@ module.exports = {
 		path: path.resolve(__dirname, 'public'),
 		filename: 'bundle.js'
 	},
-	// depois de instalar o webpack dev server
 	devServer: {
 		contentBase: path.resolve(__dirname, 'public')
 	},
@@ -19,7 +18,6 @@ module.exports = {
 					loader: 'babel-loader'
 				}
 			},
-			// depois de instalar o style-loader e o css-loader
 			{
 				test: /\.css$/,
 				exclude: /node_modules/,
@@ -28,9 +26,8 @@ module.exports = {
 					{ loader: 'css-loader' }
 				]	
 			},
-			// depois de instalar o file-loader
 			{
-				test: /\.*\.(gif|png|jpe?g)$/i,
+				test: /.*\.(gif|png|jpe?g)$/i,
 				use: {
 					loader: 'file-loader'
 				}	
